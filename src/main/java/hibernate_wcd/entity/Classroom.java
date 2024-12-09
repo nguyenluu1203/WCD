@@ -13,9 +13,10 @@ import java.util.List;
 public class Classroom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column(name = "name")
-    private String nameABC;
+    private Long id;
+    //    @Column(name = "name")
+    private String name;
+
     @OneToMany(mappedBy = "classroom")
     private List<Student> students;
 }
